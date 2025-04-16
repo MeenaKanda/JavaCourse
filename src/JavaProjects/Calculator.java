@@ -166,7 +166,7 @@ public class Calculator implements ActionListener{
 				break;
 			case '-':
 				result = num1-num2;
-				break;
+				break;  	
 			case '*':
 				result = num1*num2;
 				break;
