@@ -35,5 +35,7 @@ public class MaxAndMinNumber {
     System.out.println(min1);
 	
 	}
+	
+	
 
 }
