@@ -55,8 +55,9 @@ public class Books {
 	
 	public void searchBySno() {
 		
-		System.out.println("Search the Book by Serial No");
+		System.out.println("\t\t\t\tSearch the Book by Serial No\n");
 		
+		System.out.println("Enter Serial No of Book:");
 		int serialNo = input.nextInt();
 		int flag =0;
 		
@@ -87,7 +88,7 @@ public class Books {
 	public void searchByAuthorName() {
 		
 		int flag =0;
-		System.out.println("Search By Author Name");
+		System.out.println("\t\t\tSearch By Author Name");
 		
 		input.nextLine();
 		
@@ -99,6 +100,8 @@ public class Books {
 	 
 		
 		for(int i=0; i<count; i++) {
+			
+			//if author matches any of its book
 			if(AuthorName.equalsIgnoreCase(theBook[i].authorName)) {
 				System.out.println(
 						theBook[i].sNo + "\t\t"
@@ -110,6 +113,7 @@ public class Books {
 				flag++;
 				return;
 			}
+			//Else no book matches for author
 			if(flag==0) {
 				System.out.println("No books of " + AuthorName + " Found.");
 			}
@@ -120,7 +124,7 @@ public class Books {
 	//To display all books
 	public void showAllBooks() {
 		
-		System.out.println("SHOWING ALL BOOKS");
+		System.out.println("\t\t\tSHOWING ALL BOOKS\n");
 		System.out.println("S.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty");
 		
 		for(int i=0; i<count; i++) {
@@ -135,7 +139,7 @@ public class Books {
 	}
 	
 	public void upgradeBookQty() {
-		System.out.println("UPGRADE QUANTITY OF THE BOOK");
+		System.out.println("\t\t\tUPGRADE QUANTITY OF THE BOOK\n");
 		
 		System.out.println("Enter Serial No of the book");
 		
@@ -223,7 +227,7 @@ public class Books {
 	public void checkInBook(Book b) {
 		for(int i=0; i<count; i++) {
 			if(b.equals(theBook[i])) {
-				theBook[i].bookQty++;
+				theBook[i].bookQtyCopy++;
 				return;
 			}
 		}

@@ -22,6 +22,8 @@ public class Book {
 		this.sNo = input.nextInt();
 		
 		System.out.println("Enter Book Name :");
+			
+		input.nextLine();
 		this.bookName = input.nextLine();
 		
 		System.out.println("Enter Author Name :");
